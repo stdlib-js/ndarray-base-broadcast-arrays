@@ -54,6 +54,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+broadcastArrays = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-arrays@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-broadcast-arrays/tags). For example,
+
+```javascript
 broadcastArrays = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-arrays@v0.2.1-umd/browser.js' )
 ```
 
@@ -66,7 +71,7 @@ var broadcastArrays = require( 'path/to/vendor/umd/ndarray-base-broadcast-arrays
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-arrays@v0.2.1-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-arrays@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -135,7 +140,7 @@ var out = broadcastArrays( [ x, y ] );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ind2sub@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-arrays@v0.2.1-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-arrays@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
