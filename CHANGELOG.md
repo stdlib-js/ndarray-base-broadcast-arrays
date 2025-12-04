@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-19)
+## Unreleased (2025-12-04)
 
 <section class="issues">
 
@@ -24,6 +24,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`2ffc422`](https://github.com/stdlib-js/stdlib/commit/2ffc422e0a5e583d45776ea7efc359186379bb0c) - **docs:** fix TSDoc return annotation values and example code _(by Philipp Burckhardt)_
 -   [`f0af2cb`](https://github.com/stdlib-js/stdlib/commit/f0af2cb05b0442f2ef20f5296cee2576191130e8) - **chore:** fix JavaScript lint errors [(#6463)](https://github.com/stdlib-js/stdlib/pull/6463) _(by lohithganni)_
 
 </details>
@@ -36,8 +37,9 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
+-   Philipp Burckhardt
 -   lohithganni
 
 </section>
