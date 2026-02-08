@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2023 The Stdlib Authors.
@@ -16,29 +16,26 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-var format = require('@stdlib/error-tools-fmtprodmsg');
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-// MODULES //
-
-var broadcastShapes = require( '@stdlib/ndarray-base-broadcast-shapes' );
-
-var broadcastArray = require( '@stdlib/ndarray-base-broadcast-array' );
-var getShape = require( '@stdlib/ndarray-base-shape' );
-
-// MAIN //
+import { ArrayLike } from '@stdlib/types/array';
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Broadcasts ndarrays to a common shape.
 *
 * ## Notes
 *
-* -   The returned arrays are views on their respective underlying data buffers. The views are typically **not** contiguous. As more than one element of a returned view may refer to the same memory location, writing to a view may affect multiple elements. If you need to write to one of the returned arrays, copy the array before performing operations which may mutate elements.
+* -   The function throws an error if provided broadcast-incompatible ndarrays.
+* -   The returned arrays are views on their respective underlying array data buffers. The views are typically **not** contiguous. As more than one element of a returned view may refer to the same memory location, writing to a view may affect multiple elements. If you need to write to a returned array, copy the array before performing operations which may mutate elements.
+* -   The returned arrays are "base" ndarrays, and, thus, returned arrays do not perform bounds checking or afford any of the guarantees of the non-base ndarray constructor. The primary intent of this function is to broadcast ndarray-like objects within internal implementations and to do so with minimal overhead.
+* -   The function always returns new ndarray instances even if an input ndarray shape and the broadcasted shape are the same.
 *
-* @param {ArrayLikeObject<ndarray>} arrays - list of input arrays
-* @throws {Error} input arrays must be broadcast compatible
-* @returns {Array<ndarray>} broadcasted arrays
+* @param arrays - input arrays
+* @throws input arrays must be broadcast compatible
+* @returns list of broadcasted arrays
 *
 * @example
 * var array = require( '@stdlib/ndarray-array' );
@@ -57,7 +54,7 @@ var getShape = require( '@stdlib/ndarray-base-shape' );
 * // returns [ 3, 2, 2 ]
 *
 * var out = broadcastArrays( [ x1, y1 ] );
-* // returns [ <ndarray> , <ndarray> ]
+* // returns [ <ndarray>, <ndarray> ]
 *
 * var x2 = out[ 0 ];
 * // returns <ndarray>
@@ -101,33 +98,9 @@ var getShape = require( '@stdlib/ndarray-base-shape' );
 * var out = broadcastArrays( [ x, y ] );
 * // throws <Error>
 */
-function broadcastArrays( arrays ) {
-	var shapes;
-	var out;
-	var sh;
-	var N;
-	var i;
+declare function broadcastArrays( arrays: ArrayLike<ndarray> ): Array<ndarray>;
 
-	N = arrays.length;
-
-	// Resolve the list of shapes...
-	shapes = [];
-	for ( i = 0; i < N; i++ ) {
-		shapes.push( getShape( arrays[ i ], false ) );
-	}
-	// Broadcast the shapes to a common shape:
-	sh = broadcastShapes( shapes );
-	if ( sh === null ) {
-		throw new Error( format('1nVFH') );
-	}
-	// Broadcast each array to the common shape...
-	out = [];
-	for ( i = 0; i < N; i++ ) {
-		out.push( broadcastArray( arrays[ i ], sh ) );
-	}
-	return out;
-}
 
 // EXPORTS //
 
-module.exports = broadcastArrays;
+export = broadcastArrays;
