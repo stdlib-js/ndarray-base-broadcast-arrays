@@ -37,7 +37,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/ndarray-base-broadcast-array": "^0.2.3",
+    "@stdlib/ndarray-base-broadcast-array": "^0.2.4",
     "@stdlib/ndarray-base-broadcast-shapes": "^0.2.3",
     "@stdlib/ndarray-base-shape": "^0.2.3",
     "@stdlib/types": "^0.4.3"
@@ -45,14 +45,14 @@
   "devDependencies": {
     "@stdlib/array-float64": "^0.2.3",
     "@stdlib/assert-is-array": "^0.2.3",
-    "@stdlib/assert-is-ndarray-like": "^0.2.2",
-    "@stdlib/ndarray-array": "^0.2.2",
+    "@stdlib/assert-is-ndarray-like": "^0.2.3",
+    "@stdlib/ndarray-array": "^0.2.3",
     "@stdlib/ndarray-base-ctor": "^0.3.1",
     "@stdlib/ndarray-base-numel": "^0.2.3",
-    "@stdlib/ndarray-base-zeros": "^0.3.0",
+    "@stdlib/ndarray-base-zeros": "^0.3.1",
     "@stdlib/ndarray-ctor": "^0.3.1",
     "@stdlib/ndarray-ind2sub": "^0.2.3",
-    "@stdlib/ndarray-zeros": "^0.3.0",
+    "@stdlib/ndarray-zeros": "^0.3.1",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
