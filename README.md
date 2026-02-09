@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import broadcastArrays from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-arrays@deno/mod.js';
+import broadcastArrays from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-arrays@v0.2.3-deno/mod.js';
 ```
 
 #### broadcastArrays( arrays )
@@ -108,7 +108,7 @@ import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.
 import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
 import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@deno/mod.js';
 import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ind2sub@deno/mod.js';
-import broadcastArrays from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-arrays@deno/mod.js';
+import broadcastArrays from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-arrays@v0.2.3-deno/mod.js';
 
 // Create a 2x2 array:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
